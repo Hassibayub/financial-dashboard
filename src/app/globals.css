@@ -16,3 +16,7 @@ h1 {
   font-weight: 700;
   font-family: var(--font-funnel-display);
 }
+
+.font-funnel {
+  font-family: var(--font-funnel-display);
+}

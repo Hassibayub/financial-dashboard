@@ -1,7 +1,8 @@
 "use client";
-import { StockQoute, StockQouteFullName } from "@/lib/types";
+import SearchBar from "@/components/layout/searchbar";
+import { fetchStockData } from "@/lib/finnhub";
+import { StockQouteFullName } from "@/lib/types";
 import { useEffect, useState } from "react";
-import { fetchStockData, mapToFullName } from "@/lib/finnhub";
 
 export default function Home() {
   const [data, setData] = useState<StockQouteFullName | null>(null);
@@ -27,6 +28,8 @@ export default function Home() {
       <h1>Good Morning...</h1>
 
       <div>{data ? data.percentChange : "no data yet..."}</div>
+
+      <SearchBar />
     </>
   );
 }
